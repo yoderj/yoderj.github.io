@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% if articles_page.number != 1 %} | Page {{ articles_page.number }}{% endif %}{% endblock %}
+
+{% block content %}
+{% set date = None %}
+{% set page = pages[0] %}
+<div class="page">
+{{page.content}}
+</div>
+
+{% endblock %}
